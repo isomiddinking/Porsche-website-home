@@ -1,6 +1,7 @@
 .find-porsche-section {
     padding: 60px 0; /* Adjust padding as needed */
     font-family: Arial, sans-serif; /* Example font, adjust as per design */
+    overflow-x: hidden;
 }
 
 .find-porsche-container {
