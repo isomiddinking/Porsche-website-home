@@ -553,6 +553,9 @@ header {
         max-width: 180px;
         height: 70px;
     }
+    .sidebar_right_models{
+        display: none;
+    }
 }
 
 @media (max-width: 375px) {
