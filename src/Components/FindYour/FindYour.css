@@ -1,0 +1,152 @@
+.container-find-box {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.left_box {
+    flex: 1;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 420px;
+}
+
+.left_box h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.left_box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.left_box button {
+    background-color: transparent;
+    color: #1a1a1a;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    align-self: flex-start;
+    border: none;
+    background-color: #ffffff;
+}
+
+.left_box button:hover {
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+.right_img-box {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 400px;
+}
+
+.right_img-box img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .container-find-box {
+        margin: 40px 20px;
+    }
+
+    .left_box {
+        padding: 40px;
+    }
+
+    .left_box h2 {
+        font-size: 2.2em;
+    }
+
+    .left_box p {
+        font-size: 1em;
+    }
+
+    .left_box button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-find-box {
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 30px 15px;
+    }
+
+    .left_box {
+        padding: 30px;
+        text-align: center;
+        order: 2;
+    }
+
+    .left_box h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .left_box p {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
+
+    .left_box button {
+        align-self: center;
+    }
+
+    .right_img-box {
+        width: 100%;
+        order: 1;
+        min-height: 250px;
+    }
+
+    .right_img-box img {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .left_box {
+        padding: 20px;
+    }
+
+    .left_box h2 {
+        font-size: 1.8em;
+    }
+
+    .left_box p {
+        font-size: 0.9em;
+    }
+
+    .left_box button {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,207 @@
+/* Footer.css */
+
+/* Base Styles */
+.footer-container {
+  background-color: #000000;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Current Region Section */
+.current-region .region-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+}
+
+.change-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.change-link:hover {
+  text-decoration: underline;
+}
+
+/* Locations & Contacts Section */
+.locations-contacts p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.get-in-touch-btn {
+  background-color: #d5001c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-in-touch-btn:hover {
+  background-color: #b30018;
+}
+
+.loactionssss{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* Social Media Section */
+.social-media p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #333;
+  background-color: #e0e0e0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #d5001c;
+  color: white;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+/* Company & Support Section */
+.company-support-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.support-list li {
+  margin-bottom: 12px;
+}
+
+.support-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.support-list a:hover {
+  color: #a9a9a9;
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.copyright-text a {
+  color: #666;
+  text-decoration: none;
+}
+
+.copyright-text a:hover {
+  text-decoration: underline;
+}
+
+.porsche-logo-bottom img {
+  height: 30px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.porsche-logo-bottom img:hover {
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .company-support-columns {
+    grid-template-columns: 1fr;
+  }
+  
+  .copyright-text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 15px;
+  }
+  
+  .region-selector {
+    flex-wrap: wrap;
+  }
+}

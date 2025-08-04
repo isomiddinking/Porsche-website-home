@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+.models-section {
+    padding: 60px 20px;
+}
+
+.models-section .para {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.models-section h2 {
+    text-align: center;
+    font-size: clamp(4em, 7vw, 6.25em);
+    margin-bottom: 60px;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+
+.models-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.model-card-overlay {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+    min-width: 320px;
+}
+
+.model-card-overlay:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease-in-out;
+}
+
+.model-card-overlay:hover .overlay-image {
+    transform: scale(1.08);
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    text-align: left;
+}
+
+.overlay-model-name {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(2.5em, 5vw, 4em);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-fuel-type {
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: clamp(0.7em, 1.5vw, 0.9em);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.overlay-description {
+    font-size: clamp(0.9em, 2vw, 1.2em);
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-price {
+    font-size: clamp(1.2em, 2.5vw, 1.5em);
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.overlay-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: clamp(0.9em, 2vw, 1em);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.primary-btn-overlay {
+    background-color: #fff;
+    color: #000;
+}
+
+.primary-btn-overlay:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.secondary-btn-overlay {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+.secondary-btn-overlay:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 1024px) {
+    .model-card-overlay {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+        padding-bottom: 65%; /* Slightly taller for two columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .models-section {
+        padding: 40px 15px;
+    }
+    .models-container {
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .model-card-overlay {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding-bottom: 70%; /* Single column, can be taller */
+        min-width: 280px; /* Allow smaller min-width for very small screens */
+    }
+    .overlay-content {
+        padding: 25px;
+    }
+    .overlay-buttons {
+        gap: 10px;
+    }
+    .overlay-btn {
+        padding: 14px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .models-section {
+        padding: 30px 10px;
+    }
+    .models-section h2 {
+        margin-bottom: 40px;
+    }
+    .models-container {
+        gap: 15px;
+    }
+    .model-card-overlay {
+        padding-bottom: 80%; /* Even taller aspect ratio for mobile */
+    }
+    .overlay-content {
+        padding: 20px;
+    }
+    .overlay-buttons {
+        gap: 8px;
+    }
+    .overlay-btn {
+        padding: 12px 10px;
+    }
+}

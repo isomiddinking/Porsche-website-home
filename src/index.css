@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollbarning umumiy kengligi */
+::-webkit-scrollbar {
+  width: 0px;        /* vertikal */
+  height: 0px;       /* gorizontal */
+}

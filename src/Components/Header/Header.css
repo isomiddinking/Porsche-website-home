@@ -1,0 +1,568 @@
+/* Header.css */
+
+.main-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Porsche Next', Arial, sans-serif;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: filter 0.4s ease-in-out;
+}
+
+.main-content-blurred {
+    filter: blur(4px);
+    pointer-events: none;
+    /* Disable interaction with blurred content */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vw;
+    color: #fff;
+    text-align: left;
+    z-index: 1;
+}
+
+.video-title {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1.1;
+    max-width: 50%;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.explore-button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.explore-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-controls:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.control-icon {
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-header {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    color: #fff;
+}
+
+header {
+    width: 90%;
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.logo_senter {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+.logo_senter img{
+    width: 200px;
+}
+
+.menu-iconbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.menu-iconbox:hover {
+    opacity: 0.8;
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.user-icon:hover {
+    opacity: 0.8;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 85%;
+    max-width: 1200px;
+    background-color: #fff;
+    color: #000;
+    transition: left 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-top {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1.5rem;
+    height: 5rem;
+    border-bottom: 1px solid #e5e5e5;
+    flex-shrink: 0;
+    /* Prevents shrinking */
+}
+
+.close-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-icon:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.sidebar-main {
+    display: flex;
+    flex-grow: 1;
+    /* Allows main content to take available space */
+    overflow: hidden;
+    /* Hide overflow for its children */
+}
+
+.sidebar_left {
+    flex: 0 0 40%;
+    /* Fixed width for left sidebar */
+    max-width: 40%;
+    margin-top: 50px;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Pushes account link to bottom */
+    overflow-y: auto;
+    /* Enable scrolling for left sidebar if content exceeds */
+}
+
+.sidebar_left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-grow: 1;
+    /* Allows the list to grow and push the account link down */
+}
+
+.sidebar_left li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    /* Adjusted padding */
+    width: 80%;
+    height: auto;
+    /* Let height adjust to content */
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin: auto;
+    /* Centers the list items */
+}
+
+.sidebar_left li:hover:not(.active) {
+    background-color: #f9f9f9;
+}
+
+.sidebar_left li.active {
+    background-color: #f1f1f1;
+    font-weight: 500;
+}
+
+.sidebar_left li span {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1.5rem 3rem;
+    /* Consistent padding with list items */
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+.account-link:hover {
+    background-color: #f9f9f9;
+}
+
+.account-link span:first-child {
+    font-size: 1.2rem;
+}
+
+.account-link span:last-child {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.sidebar_right_models {
+    padding-top: 900px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow-y: auto;
+    background-color: #EEEFF2;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+}
+
+.model-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    transition-duration: 0.3s;
+}
+
+
+
+.model-item img {
+    width: 100%;
+    max-width: 280px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.model-item:hover {
+    background-color: #fff;
+}
+
+.model-item:hover img {
+    transform: translateX(20px);
+}
+
+.model-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.model-type {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+/* Header.css */
+
+/* ... (keep all your existing styles until the media queries) ... */
+
+/* --- Media Queries for Ideal Responsiveness --- */
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 90%;
+    }
+    
+    .model-item {
+        width: 400px;
+        height: 300px;
+    }
+
+    .sidebar_right_models{
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .video-title {
+        font-size: 2.8rem;
+        max-width: 60%;
+    }
+
+    .sidebar_left {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    .sidebar_left li {
+        padding: 1.2rem 2rem;
+    }
+
+    .account-link {
+        padding: 1.5rem 2rem;
+    }
+
+    .model-item {
+        width: 350px;
+        height: 280px;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .model-item {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-header {
+        height: 4.5rem;
+    }
+
+    .video-overlay {
+        padding-left: 5vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    .video-title {
+        font-size: 2.2rem;
+        max-width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .explore-button {
+        padding: 0.7rem 1.3rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .sidebar-main {
+        flex-direction: column;
+    }
+
+    .sidebar_left {
+        width: 100%;
+        max-width: unset;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 1rem;
+        flex-shrink: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .sidebar_left ul {
+        flex-grow: unset;
+    }
+
+    .sidebar_left li {
+        width: 90%;
+        padding: 1rem 1.5rem;
+    }
+
+    .account-link {
+        width: 90%;
+        margin: 0 auto 1rem auto;
+        padding: 1rem 1.5rem;
+        border-top: none;
+    }
+
+    .sidebar_right_models {
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .model-item {
+        width: calc(50% - 1rem);
+        min-width: 280px;
+        height: 220px;
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    .model-item img {
+        max-width: 200px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar_right_models {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .model-item {
+        width: 100%;
+        max-width: 350px;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-title {
+        font-size: 1.8rem;
+    }
+
+    .menu-iconbox h2 {
+        font-size: 1rem;
+    }
+
+    .logo_senter img {
+        height: 2rem;
+    }
+
+    .sidebar_left li {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .account-link {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+
+    .model-item {
+        height: 200px;
+        padding: 1.2rem;
+    }
+
+    .model-item img {
+        max-width: 180px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-title {
+        font-size: 1.6rem;
+    }
+    
+    .model-item {
+        height: 180px;
+    }
+    
+    .model-item img {
+        max-width: 160px;
+        height: 60px;
+    }
+}

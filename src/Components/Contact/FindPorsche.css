@@ -1,0 +1,179 @@
+.find-porsche-section {
+    padding: 60px 0; /* Adjust padding as needed */
+    font-family: Arial, sans-serif; /* Example font, adjust as per design */
+}
+
+.find-porsche-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.find-porsche-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Space between left and right sections */
+}
+
+.find-porsche-left {
+    flex: 1;
+    max-width: 50%; /* Adjust as needed */
+    padding-right: 20px; /* Space between content and image if they are too close */
+}
+
+.find-porsche-left h1 {
+    font-size: 3.5em; /* Large heading size */
+    color: #333; /* Dark grey color */
+    margin-bottom: 20px;
+}
+
+.find-porsche-left .subtitle {
+    font-size: 1.1em;
+    color: #555; /* Slightly lighter grey for subtitle */
+    margin-bottom: 30px;
+    }
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.location-label {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper.focused {
+    border-color: #a0a0a0; /* Slightly darker border when focused */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* More pronounced shadow when focused */
+}
+
+.location-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 5px 0; /* Adjust internal padding */
+    color: #333;
+}
+
+.location-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888; /* Color for the search icon */
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: #555; /* Darker color on hover */
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.find-porsche-right {
+    flex: 1;
+    width: 50%; /* Adjust as needed */
+    height: 500px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+.porsche-image img{
+    width: 100%;
+    display: block;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .find-porsche-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .find-porsche-left,
+    .find-porsche-right {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .find-porsche-left h1 {
+        font-size: 2.8em;
+    }
+
+    .find-porsche-left .subtitle {
+        font-size: 1em;
+    }
+
+    .input-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .find-porsche-section {
+        padding: 40px 0;
+    }
+
+    .find-porsche-left h1 {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+
+    .find-porsche-left .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .input-wrapper {
+        padding: 8px 12px;
+    }
+
+    .location-input {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .find-porsche-left h1 {
+        font-size: 1.8em;
+    }
+}
