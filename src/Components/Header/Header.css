@@ -503,6 +503,9 @@ header {
         max-width: 200px;
         height: 80px;
     }
+    .logo_senter{
+        display: none;
+    }
 }
 
 @media (max-width: 650px) {
