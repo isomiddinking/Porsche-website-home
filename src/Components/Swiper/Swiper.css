@@ -100,7 +100,7 @@
 @media (max-width: 768px) {
   .online-shop-highlights {
     padding: 1rem;
-    margin-top: 200px;
+    margin-top: -50px;
   }
   
   .online-shop-highlights h2 {
