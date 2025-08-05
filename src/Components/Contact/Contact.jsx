@@ -43,8 +43,6 @@ const FindPorsche = () => {
                 </label>
                 <div 
                   className={`input-wrapper ${isFocused ? 'focused' : ''}`}
-                  data-aos="fade-up"
-                  data-aos-delay="400"
                 >
                   <input
                     type="text"
@@ -59,8 +57,6 @@ const FindPorsche = () => {
                   <button 
                     type="submit" 
                     className="search-button"
-                    data-aos="zoom-in"
-                    data-aos-delay="450"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

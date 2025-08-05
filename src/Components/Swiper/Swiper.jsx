@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { FaArrowRight } from "react-icons/fa6";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -62,7 +63,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Indoor Car Cover in Martini Racing Design</h3>
               <p className="product-description">Protect your vehicle in style using this custom-fit indoor car cover featuring the classic Martini Racing design.</p>
               <a href="#" className="product-link">
-                &rarr; Indoor Car Cover
+                <FaArrowRight /> Indoor Car Cover
               </a>
             </div>
           </SwiperSlide>
@@ -73,7 +74,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Smartwatch Porsche x Garmin® Epix Pro</h3>
               <p className="product-description">GPS multisport smartwatch with unique Porsche details and extensive fitness and health features.</p>
               <a href="#" className="product-link">
-                &rarr; Garmin Epix Pro
+               <FaArrowRight />Garmin Epix Pro
               </a>
             </div>
           </SwiperSlide>
@@ -84,7 +85,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Porsche eBike Cross Performance EXC 2nd Gen.</h3>
               <p className="product-description">High-performance exclusive electric mountain bike from Porsche.</p>
               <a href="#" className="product-link">
-                &rarr; eBike
+               <FaArrowRight /> eBike
               </a>
             </div>
           </SwiperSlide>
@@ -95,7 +96,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Porsche 917 Salzburg Design Mat</h3>
               <p className="product-description">The perfect velour mat in an iconic Salzburg design for every enthusiast's garage or workshop.</p>
               <a href="#" className="product-link">
-                &rarr; Salzburg Garage Mat
+               <FaArrowRight /> Salzburg Garage Mat
               </a>
             </div>
           </SwiperSlide>
@@ -106,7 +107,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Product Title 5</h3>
               <p className="product-description">This is a placeholder description for product 5. You should replace this text with actual product details.</p>
               <a href="#" className="product-link">
-                &rarr; More Info 5
+               <FaArrowRight /> More Info 5
               </a>
             </div>
           </SwiperSlide>
@@ -117,7 +118,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Product Title 6</h3>
               <p className="product-description">This is a placeholder description for product 6. Update this with relevant information.</p>
               <a href="#" className="product-link">
-                &rarr; More Info 6
+              <FaArrowRight /> More Info 6
               </a>
             </div>
           </SwiperSlide>
@@ -128,7 +129,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Product Title 7</h3>
               <p className="product-description">This is a placeholder description for product 7. Customize it as needed.</p>
               <a href="#" className="product-link">
-                &rarr; More Info 7
+             <FaArrowRight /> More Info 7
               </a>
             </div>
           </SwiperSlide>
@@ -139,7 +140,7 @@ const SwiperComponent = () => {
               <h3 className="product-title">Product Title 8</h3>
               <p className="product-description">This is a placeholder description for product 8. Final card content goes here.</p>
               <a href="#" className="product-link">
-                &rarr; More Info 8
+              <FaArrowRight /> More Info 8
               </a>
             </div>
           </SwiperSlide>
