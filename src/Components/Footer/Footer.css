@@ -182,6 +182,10 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .loactionssss{
+    grid-template-columns: 1fr ;
+    row-gap: 40px;
+  }
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
